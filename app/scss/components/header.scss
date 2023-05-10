@@ -1,0 +1,46 @@
+@use '../util' as *;
+
+.header {
+  margin-top: rem(36);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+
+
+  @include breakpoint(medium) {
+    flex-direction: row;  
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+
+  }
+
+  &__subtitle {
+    font-size: rem(14);
+    font-weight: 700;
+    color: var(--dark-text1);
+  }
+
+  &__divider {
+    height: 1px;
+    width: 100%;
+    margin: rem(20) 0;
+    background: var(--dark-text1);
+    opacity: 0.3;
+
+    @include breakpoint(medium) {
+      display: none;
+    }
+  }
+
+  &__toggle {
+    align-self: end;
+
+    @include breakpoint(medium) {
+      align-self: center;
+    }
+  }
+}

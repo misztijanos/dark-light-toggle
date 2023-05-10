@@ -1,10 +1,70 @@
 @use '../util' as *;
 
 .toggle {
+  border: none;
+  font-size: rem(14);
+  color: var(--dark-text1);
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+
+  &__wrapper {
+    height: rem(24);
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    margin-left: rem(5);
+    margin-right: rem(5);
+  }
+
+  label {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+
+  input[type="radio"] {
+    opacity: 0;
+    height: 100%;
+    width: rem(24);
+    margin: 0 rem(-2);
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__background {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(
+      225deg,
+      var(--toggle-bg-end) 0%,
+      var(--toggle-bg-start) 98.02%
+    );
+    border-radius: rem(12);
+    z-index: 0;
+  }
+
   &__button {
-    width: rem(16);
-    height: rem(16);
+    display: block;
+    position:absolute;
+    top: 10%;
+    left: 5%;
+    right: 50%;
+    width: 40%;
+    height: 80%;
     border-radius: 50%;
-    color: var(--toggle);
+    background: var(--dark-bg);
+    transition: all 0.1s ease-out;
+    z-index: 2;
+  }
+
+  #light:checked ~ &__button {
+    left: 55%;
+    right: 5%;
   }
 }

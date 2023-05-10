@@ -1,11 +1,29 @@
 @use '../util' as *;
 
 .container {
-  max-width: rem(1110);
+  
   padding: 0 rem(25);
-  margin: 0 auto;
+  margin: 0 auto rem(46) auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  justify-items: center;
+  gap: rem(30);
+  
+  @include breakpoint(medium) {
+    max-width: rem(890);
+    grid-template-columns: 1fr 1fr;
+  }
 
   @include breakpoint(large) {
+    max-width: rem(1110);
+    grid-template-columns: repeat(4, 1fr);
     padding: 0;
   }
+  
+  .subtitle {
+  grid-column: 1 / -1;
+  justify-self: start;
 }
+}
+

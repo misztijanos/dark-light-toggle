@@ -1,0 +1,36 @@
+@use '../util' as *;
+
+.card2 {
+  padding: rem(30) 10%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  height: rem(150);
+  
+  justify-items: start;
+  align-items: start;
+
+  &__description {
+    color: var(--dark-text1);
+    font-weight: 700;
+    font-size: rem(15);
+    
+  }
+
+  &__icon {
+    justify-self: end;
+    margin: 0;
+  }
+
+  &__count {
+    align-self: end;
+    font-size: rem(34);
+  }
+
+  &__change {
+    justify-self: end;
+    align-self: end;
+    font-size: rem(16);
+  }
+}
+
