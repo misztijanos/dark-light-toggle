@@ -11,7 +11,11 @@
   padding: rem(15) 0;
   width: 100%;
   max-width: rem(400);
-  background: var(--dark-card);
+  background: var(--card-bg);
+
+  &:hover {
+    background: var(--card-hover);
+  }
 
   &--facebook {
     border-top: solid rem(5) var(--facebook);
@@ -55,7 +59,7 @@
   &__username {
     display: inline;
     vertical-align: middle;
-    color: var(--dark-text1);
+    color: var(--text-color2);
   }
 
   &__followers {
@@ -63,7 +67,7 @@
   }
 
   &__count {
-    color: var(--light-bg);
+    color: var(--text-color);
     font-weight: 700;
     letter-spacing: rem(-2);
     line-height: 1;
@@ -81,7 +85,7 @@
   &__label {
     font-size: rem(12);
     font-weight: 400;
-    color: var(--dark-text1);
+    color: var(--text-color2);
     text-transform: uppercase;
     letter-spacing: rem(5);
     
